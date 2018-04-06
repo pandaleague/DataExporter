@@ -24,11 +24,19 @@ class SimpleTable implements Table
      * @param string $name
      * @param array $sensitiveFields
      */
-    public function __construct(string $name, array $sensitiveFields = [])
+    public function __construct($name, array $sensitiveFields = [])
     {
+        if ( ! is_string($name)) {
+            throw new \RuntimeException('name must be string');
+        }
+
         $this->name = $name;
 
         foreach ($sensitiveFields as $sensitiveField) {
+            if ( ! ($sensitiveField instanceof SensitiveField)) {
+                throw new \RuntimeException('must be instance of SensitiveField');
+            }
+
             $this->addSensitiveField($sensitiveField);
         }
     }

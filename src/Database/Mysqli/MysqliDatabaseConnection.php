@@ -26,7 +26,7 @@ class MysqliDatabaseConnection implements DatabaseConnection
     /**
      * @inheritdoc
      */
-    public function query(string $query, array $params)
+    public function query($query, array $params)
     {
         var_dump(vsprintf($query, $params));
         $result = $this->connection->query(vsprintf($query, $params));

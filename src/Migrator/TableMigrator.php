@@ -28,7 +28,7 @@ class TableMigrator
      * @param string $sourceDatabase
      * @param string $destinationDatabase
      */
-    public function __construct(DatabaseConnection $connection, string $sourceDatabase, string $destinationDatabase)
+    public function __construct(DatabaseConnection $connection, $sourceDatabase, $destinationDatabase)
     {
         $this->connection = $connection;
         $this->sourceDatabase = $sourceDatabase;

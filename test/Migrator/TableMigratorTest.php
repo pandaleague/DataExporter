@@ -59,10 +59,10 @@ class TableMigratorTest extends TestCase
      * @return array
      */
     private function getConsecutiveCalls(
-        string $sourceDatabase,
-        string $destinationDatabase,
+        $sourceDatabase,
+        $destinationDatabase,
         array $tables,
-        string $fields = '*',
+        $fields = '*',
         array $after_export = []
     ) {
         return array_reduce($tables,

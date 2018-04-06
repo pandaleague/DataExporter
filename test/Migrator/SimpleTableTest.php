@@ -19,8 +19,8 @@ class SimpleTableTest extends TestCase
             ['test'],
             ['test', []],
             ['test', [$sensitiveField], [$sensitiveField]],
-            [new \stdClass, [], [], \TypeError::class],
-            ['test', [new \stdClass], [], \TypeError::class],
+            [new \stdClass, [], [], \RuntimeException::class],
+            ['test', [new \stdClass], [], \RuntimeException::class],
         ];
     }
 
@@ -45,7 +45,7 @@ class SimpleTableTest extends TestCase
         } else {
             $table = new SimpleTable($name);
         }
-        $this->assertSame($table->getName(), 'test');
-        $this->assertSame($table->getSensitiveFields(), $expectedSensitiveFields);
+        self::assertSame($table->getName(), 'test');
+        self::assertSame($table->getSensitiveFields(), $expectedSensitiveFields);
     }
 }

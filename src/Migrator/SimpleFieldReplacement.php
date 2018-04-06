@@ -31,7 +31,7 @@ class SimpleFieldReplacement implements SensitiveField
      * @param string $replacement
      * @param string $type
      */
-    public function __construct(string $name, string $replacement, string $type = self::AT_EXPORT)
+    public function __construct($name, $replacement, $type = self::AT_EXPORT)
     {
         if ( ! in_array($type, self::TYPES)) {
             throw new \RuntimeException('Type not available: ' . $type);
@@ -61,7 +61,7 @@ class SimpleFieldReplacement implements SensitiveField
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType()
     {
         return $this->type;
     }

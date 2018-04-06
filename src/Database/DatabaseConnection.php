@@ -10,5 +10,5 @@ interface DatabaseConnection
      * @param array $params
      * @return DatabaseResult
      */
-    public function query(string $query, array $params);
+    public function query($query, array $params);
 }
