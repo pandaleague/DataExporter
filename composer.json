@@ -1,0 +1,22 @@
+{
+  "name": "pandaleague/data_exporter",
+  "description": "Export data",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "George McGinley Smith",
+      "email": "george@mukuru.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PandaLeague\\DataExporter": [
+        "src/"
+      ]
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  }
+}
