@@ -3,6 +3,10 @@
 /**
  * @author george
  */
+/**
+ * Class SimpleTable
+ * @package PandaLeague\DataExporter\Migrator
+ */
 class SimpleTable implements Table
 {
     /**
@@ -46,6 +50,7 @@ class SimpleTable implements Table
     }
 
     /**
+     * @param null $type
      * @return SensitiveField[]
      */
     public function getSensitiveFields($type = null)

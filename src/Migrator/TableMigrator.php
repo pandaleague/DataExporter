@@ -49,7 +49,7 @@ class TableMigrator
     }
 
     /**
-     * @param TableStructure $structure
+     *
      */
     private function createDatabase()
     {

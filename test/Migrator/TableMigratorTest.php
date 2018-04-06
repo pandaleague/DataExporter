@@ -100,7 +100,6 @@ class TableMigratorTest extends TestCase
      * @param $consecutiveCalls
      * @param $columns
      * @return DatabaseConnection
-     * @throws \ReflectionException
      */
     private function databaseConnectionMock(
         $consecutiveCalls,
@@ -124,7 +123,6 @@ class TableMigratorTest extends TestCase
     /**
      * @param array $toArray
      * @return DatabaseResult
-     * @throws \ReflectionException
      */
     private function resultMock(array $toArray)
     {

@@ -11,7 +11,6 @@ class SimpleTableTest extends TestCase
 {
     /**
      * @return array
-     * @throws \ReflectionException
      */
     public function constructProvider()
     {

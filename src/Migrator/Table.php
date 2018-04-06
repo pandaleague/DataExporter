@@ -11,6 +11,7 @@ interface Table
     public function getName();
 
     /**
+     * @param $type
      * @return SensitiveField[]
      */
     public function getSensitiveFields($type);
